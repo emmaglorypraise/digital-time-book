@@ -1,0 +1,133 @@
+:root{
+  --dark-blue: hsl(230, 76%, 19%);
+  --light-blue:  hsl(228, 79%, 28%);
+  --white: hsl(0, 0%, 100%);
+  --grey:  hsl(0, 0%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+/*================================== header section==================================== */
+.navbar-brand img {
+  max-height: 60px;
+}
+.custom-hamburger-btn {
+  border: none;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 2.5%;
+  cursor: pointer;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 2.5px 0;
+  transition: 0.4s;
+}
+
+/* Toggle class to  change the state of hambuger icon cross*/
+.toggle .line-1 {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.toggle .line-2 {
+  opacity: 0;
+}
+
+.toggle .line-3 {
+  transform: translateY(-6.89px) rotate(-135deg);
+}
+.btn {
+  background-color: var(--white);
+  outline-color: transparent;
+  color: var(--white);
+  border-radius: 4px;
+}
+.btn:hover {
+  color: var(--btn-color);
+}
+nav .btn{
+  padding: 10px;
+  min-width: 197px;
+}
+.navbar-light .navbar-brand{
+  color: var(--white);
+  font-weight: 400;
+}
+.navbar-light .navbar-brand:hover{
+  color: var(--white);
+}
+.navbar-light .navbar-nav .nav-link{
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+}
+body{
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+#intern-confirmation-page{
+  width: 100%;
+  
+}
+h2{
+  text-align: center;
+}
+ form{
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-group{
+  width: 90%;
+}
+.form-group input{
+  width: 100%;
+  margin: 0 auto 10px;
+  border: none;
+  border-bottom: 3px solid var(--white);
+  border-radius: 3px;
+  color: var(--white);
+  background-color: transparent;
+  outline: none;
+  text-align: center;
+}
+ button{
+  width: 50%;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 1px solid var(--white);
+  text-align: center;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
