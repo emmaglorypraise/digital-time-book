@@ -66,9 +66,24 @@ nav .btn{
 }
 .navbar-light .navbar-brand{
   color: var(--white);
+  font-weight: 400;
 }
 .navbar-light .navbar-brand:hover{
   color: var(--white);
+}
+.navbar-light .navbar-nav .nav-link{
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+}
+.active-link{
+  text-decoration: underline;
+  text-decoration-color: var(--white);
 }
 body{
   background-color: var(--dark-blue);
@@ -76,28 +91,36 @@ body{
 }
 #intern-confirmation-page{
   width: 100%;
+  
+}
+h2{
+  text-align: center;
 }
  form{
-  width: 100%;
-  margin: 100px auto;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .form-group{
-  margin-left: 10px;
+  width: 90%;
 }
- .form-group input{
-  width: 80%;
-  height: 40px;
-  padding: 30px;
-  border-radius: 40px;
-  border: 1px solid var(--dark-blue);
-  color: var(--grey);
-  text-align: left;
+.form-group input{
+  width: 100%;
+  margin: 0 auto 10px;
+  border: none;
+  border-bottom: 3px solid var(--white);
+  border-radius: 3px;
+  color: var(--white);
+  background-color: transparent;
   outline: none;
+  text-align: center;
 }
-.form-group button {
-  margin-left: -60px;
-  width: 25%;
-  height: 62px;
+.form-group button{
+  width: 50%;
+  height: 60px;
+  margin: 0 auto;
   border-radius: 30px;
   border: 1px solid var(--white);
   text-align: center;
@@ -107,13 +130,41 @@ body{
   font-weight: 600;
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 .form-group button a{
   color: var(--dark-blue);
 }
-.form-group h3{
-  font-size: 16px;
+.sign{
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
   text-align: center;
-  margin-top: 20px;
+}
+.sign button{
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 1px solid var(--light-blue);
+  text-align: center;
+  background-color: var(--light-blue);
   color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.sign button:hover{
+  border: 1px solid var(--white);
+  text-align: center;
+  background-color: var(--white);
+  color: var(--light-blue);
 }

@@ -113,7 +113,7 @@ h2{
   outline: none;
   text-align: center;
 }
- button{
+.form-group button{
   width: 50%;
   height: 60px;
   margin: 0 auto;
@@ -130,4 +130,40 @@ h2{
   justify-content: center;
   align-items: center;
 }
-
+.form-group button a{
+  color: var(--dark-blue);
+}
+.radio {
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px;
+}
+.radio label{
+  margin: 10px;
+}
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -16px;
+  left: -1px;
+  position: relative;
+  background-color: #ffffff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -16px;
+  left: -1px;
+  position: relative;
+  background-color: var(--dark-blue);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}

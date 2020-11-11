@@ -7,7 +7,7 @@
   <meta name="description"
     content="the Roothub Port Harcourt Interns Digital Timer">
   <link href="./assets/css/bootstrap.css" rel="stylesheet" />
-  <link href="./assets/css/sign-up.css" rel="stylesheet" />
+  <link href="./assets/css/attendance.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title> Roothub Interns Digital Timing Book</title>
@@ -31,14 +31,18 @@
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto ">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-lg-3">
-              <a class="nav-link" href="#">Create Your Profile</a>
+              <a class="nav-link active-link" href="about.html">Sign Attendance</a>
             </li>
             <li class="nav-item mx-lg-3">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link " href="about.html">See Attendance</a>
             </li>
-        </div>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div> 
       </div>
     </nav>
 
@@ -54,11 +58,15 @@
          <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-lg-3">
-              <a class="nav-link active-link" href="register.html">Create Your Profile</a>
+              <a class="nav-link active-link" href="about.html">Sign Attendance</a>
             </li>
             <li class="nav-item mx-lg-3">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link " href="about.html">See Attendance</a>
             </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="about.html">About Us</a>
+            </li>
+          </ul>
         </div> 
       </div>
     </nav>
@@ -67,12 +75,36 @@
     <section id="intern-confirmation-page">
       <div class="container ">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 mt-3">
+            <h2>Sign Attendance</h2>
             <form action="" method="post">
               <div class="form-group ">
-                <input type="text" placeholder="e.g 0123456789">
-                <button><a href="attendance.html">Submit</a></button>
-                <h3>INPUT YOUR INTERN ID  <span><a href="register.html" target="_blank" rel="noopener noreferrer">No ID yet? Create Profile</a></span></h3>
+                <input type="text" value="MATTHEW ANDERSON">
+              </div>
+              <div class="form-group ">
+                <input type="text" value="INTERN">
+              </div>
+              <div class="form-group ">
+                <input type="text" value="SARS ROAD,RUPORKU, PH">
+              </div>
+              <div class="sign">
+                 <div class="row">
+                  <div class="col-md-6">
+                    <div class="">
+                      <button>Sign Entry</button>
+                      <p>In By:   <span>9:00am</span></p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="">
+                      <button>Sign Exit</button>
+                      <p>Out By:   <span>5:00pm</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit"><a href="index.html">Done</a></button>
               </div>
             </form>
           </div>

@@ -105,7 +105,7 @@ body{
 .form-group button{
   margin-left: -60px;
   width: 25%;
-  height: 63px;
+  height: 64px;
   border-radius: 30px;
   border: 1px solid var(--dark-blue);
   text-align: center;
@@ -115,6 +115,9 @@ body{
   font-weight: 600;
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
   outline: none;
+}
+.form-group button a{
+  color: var(--white);
 }
 .form-group h3{
   font-size: 16px;
