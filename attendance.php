@@ -1,3 +1,17 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['name'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: sign-up.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,18 +88,32 @@
   <main>
     <section id="intern-confirmation-page">
       <div class="container ">
+
+      <div class="content">
+  	<!-- notification message -->
+  	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="error success" >
+      	<h3 class="text-center text-success mt-3">
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php endif ?>
+
         <div class="row">
           <div class="col-md-12 mt-3">
             <h2>Sign Attendance</h2>
             <form action="" method="post">
               <div class="form-group ">
-                <input type="text" value="MATTHEW ANDERSON">
+                <input type="text" value="MATTHEW ANDERSON" placeholder="Full name">
               </div>
               <div class="form-group ">
-                <input type="text" value="INTERN">
+                <input type="text" value="INTERN" placeholder="Role">
               </div>
               <div class="form-group ">
-                <input type="text" value="SARS ROAD,RUPORKU, PH">
+                <input type="text" value="SARS ROAD,RUPORKU, PH" placeholder="Address">
               </div>
               <div class="sign">
                  <div class="row">
@@ -104,7 +132,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <button type="submit"><a href="index.html">Done</a></button>
+                <button type="submit">Done</button>
               </div>
             </form>
           </div>

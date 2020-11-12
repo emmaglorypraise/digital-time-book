@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,21 +66,25 @@
         <div class="row">
           <div class="col-md-12">
             <h2>Create Intern Profile</h2>
-            <form action="" method="post">
+            <form method="post" action="register.php">
+              <?php include('errors.php'); ?>
               <div class="form-group ">
-                <input type="text" placeholder="FULL NAME">
+                <input type="text" placeholder="FULL NAME" name="name">
               </div>
               <div class="form-group ">
-                <input type="text" placeholder="INTERN ID">
+                <input type="text" placeholder="INTERN ID" name="idnum">
               </div>
               <div class="form-group ">
-                <input type="number" placeholder="PHONE NUMBER">
+                <input type="text" placeholder="ROLE" name="role">
               </div>
               <div class="form-group ">
-                <input type="email" placeholder="EMAIL">
+                <input type="number" placeholder="PHONE NUMBER" name="phone">
               </div>
               <div class="form-group ">
-                <input type="text" placeholder="ADDRESS">
+                <input type="email" placeholder="EMAIL" name="email">
+              </div>
+              <div class="form-group ">
+                <input type="text" placeholder="ADDRESS" name="location">
               </div>
               <div class="radio">
                 <label for="">Sex:
@@ -88,7 +93,7 @@
                 <label for=""><input type="radio" name="gender" value="female" > Female</label>
               </div>
               <div class="form-group">
-                <button><a href="attendance.html">Submit</a></button>
+                <button name="reg_user">Submit</button>
               </div>
             </form>
           </div>

@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,10 +42,11 @@
       <div class="container ">
         <div class="row">
           <div class="col-md-12">
-            <form action="" method="post">
+            <form method="post" action="index.php">
+            <?php include('errors.php'); ?>
               <div class="form-group ">
-                <input type="text" placeholder="e.g 0123456789">
-                <button><a href="sign-up.html">Submit</a></button>
+                <input type="text" name="intern-password" placeholder="e.g 0123456789" required>
+                <button name="verify_intern">Submit</button>
                 <h3>INPUT YOUR INTERN PASSWORD</h3>
               </div>
             </form>

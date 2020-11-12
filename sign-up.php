@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,7 @@
          <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-lg-3">
-              <a class="nav-link active-link" href="register.html">Create Your Profile</a>
+              <a class="nav-link active-link" href="register.php">Create Your Profile</a>
             </li>
             <li class="nav-item mx-lg-3">
               <a class="nav-link" href="#">About Us</a>
@@ -68,11 +69,12 @@
       <div class="container ">
         <div class="row">
           <div class="col-md-12">
-            <form action="" method="post">
+            <form method="post" action="sign-up.php">
+              <?php include('errors.php'); ?>
               <div class="form-group ">
-                <input type="text" placeholder="e.g 0123456789">
-                <button><a href="attendance.html">Submit</a></button>
-                <h3>INPUT YOUR INTERN ID  <span><a href="register.html" target="_blank" rel="noopener noreferrer">No ID yet? Create Profile</a></span></h3>
+                <input type="text" name="idnum" placeholder="e.g 0123456789">
+                <button name="login_user">Submit</button>
+                <h3>INPUT YOUR INTERN ID  <span><a href="register.php" target="_blank" rel="noopener noreferrer">No ID yet? Create Profile</a></span></h3>
               </div>
             </form>
           </div>
