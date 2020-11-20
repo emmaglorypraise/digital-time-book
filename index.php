@@ -44,8 +44,9 @@
           <div class="col-md-12">
             <form method="post" action="index.php">
             <?php include('errors.php'); ?>
+            <p class="errorMsg"></p>
               <div class="form-group ">
-                <input type="text" name="intern-password" placeholder="e.g 0123456789" required>
+                <input type="text" name="intern-password" onfocus="this.value=''" placeholder="e.g 0123456789" required>
                 <button name="verify_intern">Submit</button>
                 <h3>INPUT YOUR INTERN PASSWORD</h3>
               </div>

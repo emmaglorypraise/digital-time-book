@@ -85,7 +85,7 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM interns WHERE name='$name' AND idnum='$idnum'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['idnum'] = $idnum;
+  	  $_SESSION['name'] = $name;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: attendance.php');
   	}else {
@@ -97,26 +97,26 @@ if (isset($_POST['login_user'])) {
 
 
 //INTERN PASSWORD VALIDATION
-if (isset($_POST['verify_intern'])) {
-  $password = mysqli_real_escape_string($db, $_POST['password']);
+// if (isset($_POST['verify_intern'])) {
+//   $password = mysqli_real_escape_string($db, $_POST['password']);
 
-  if (empty($password)) {
-  	array_push($errors, "Intern Password is required");
-  }
+//   if (empty($password)) {
+//   	array_push($errors, "Intern Password is required");
+//   }
 
-  if (count($errors) == 0) {
-  	$password = md5($password);
-  	$query = "SELECT * FROM password WHERE password='$password'";
-  	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
-  	  // $_SESSION['password'] = $password;
-  	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: sign-up.php');
-  	}else {
-  		array_push($errors, "Wrong password...Try Again");
-  	}
-  }
-}
+//   if (count($errors) == 0) {
+//   	$password = md5($password);
+//   	$query = "SELECT * FROM password WHERE password='$password'";
+//   	$results = mysqli_query($db, $query);
+//   	if (mysqli_num_rows($results) == 1) {
+//   	  // $_SESSION['password'] = $password;
+//   	  $_SESSION['success'] = "You are now logged in";
+//   	  header('location: sign-up.php');
+//   	}else {
+//   		array_push($errors, "Wrong password...Try Again");
+//   	}
+//   }
+// }
 
 
 // ?>
